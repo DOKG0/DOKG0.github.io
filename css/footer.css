@@ -1,0 +1,44 @@
+/* Footer */
+footer {
+    background: url('img/footer/mano-digital.png') no-repeat center center;
+    background-size: cover; /* Abarca toda la sección */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: #fff; /* Color de texto */
+    padding: 2rem 0; /* Espaciado */
+    text-align: center;
+    position: relative;
+}
+
+footer .container {
+    position: relative;
+    z-index: 2; /* Para que el contenido quede encima de la imagen */
+}
+
+footer::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.4); /* Oscurece la imagen */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Coloca el fondo detrás del contenido */
+}
+
+.social-links {
+    display: inline-block;
+    margin-top: 10px; 
+}
+
+.social-links a {
+    margin: 0 15px; 
+    text-decoration: none;
+    color: #fff; /* Color de enlaces */
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: #0077b5;
+}
+

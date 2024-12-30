@@ -1,0 +1,30 @@
+/* base.css */
+:root {
+    --background: #1a1a1a;
+    --container-bg: #121212;
+    --text: #ffffff;
+    --accent: #00e5b0;
+    --gradient: linear-gradient(90deg, #00e5b0, #3f51b5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background: url('/img/home/home.png') no-repeat center center fixed;
+    background-size: cover; /* Hace que la imagen sea responsiva */
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}

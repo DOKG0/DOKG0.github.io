@@ -1,0 +1,148 @@
+/* proyectos.css */
+.projects {
+    padding: 8rem 0;
+    font-size: 0.9rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0rem 0;
+}
+
+.project-card {
+    position: relative; 
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--text); 
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(22, 21, 21, 0.9); 
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.project-card:hover {
+    transform: translateY(-1px);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    margin-top: 1rem;
+}
+
+/* Estilo para cada proyecto individual */
+.project-item {
+    display: flex;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 1rem;
+    gap: 1rem;
+    transition: transform 0.3s;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagen dentro de la card del proyecto */
+.project-image-small {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Detalles del proyecto */
+.project-details {
+    flex: 1;
+}
+
+.project-details h4 {
+    margin: 0;
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.project-details p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.tech-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.project-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.project-item-link:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-details p {
+        word-wrap: break-word;
+        white-space: normal;
+        text-align: justify; /* Justifica el texto para un mejor formato */
+    }
+
+    .project-item {
+        flex-direction: column; /* Cambia la dirección del contenido para mejorar el diseño en móvil */
+    }
+
+    .project-image-small {
+        width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho en móvil */
+        height: auto; /* Mantén la proporción de la imagen */
+        margin-bottom: 1rem; /* Añade espacio entre la imagen y el texto */
+    }
+
+    .project-details {
+        width: 100%; /* Asegúrate de que el texto ocupe todo el ancho disponible */
+    }
+}

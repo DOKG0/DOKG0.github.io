@@ -1,0 +1,55 @@
+/* header.css */
+header {
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: var(--container-bg);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        justify-content: center;
+    }
+}
+
+/* @media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+} */
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: row; /* Mantiene los enlaces en fila */
+        gap: 1rem;
+        flex-wrap: wrap; /* Permite que los enlaces se ajusten si es necesario */
+        justify-content: space-around; /* Espacia los enlaces uniformemente */
+    }
+
+    nav a {
+        font-size: 0.9rem; /* Opcional: Reduce el tamaño de fuente para que encajen mejor */
+    }
+}

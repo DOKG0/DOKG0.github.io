@@ -1,0 +1,14 @@
+/* herramientas.css */
+.herramientas {
+    padding: 4rem 0;
+}
+
+.herramientas .skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.skill-item {
+    text-align: center;
+}

@@ -1,0 +1,133 @@
+.about {
+    padding: 4rem 0;
+}
+
+.about-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* .project-card {
+    background: var(--container-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+} */
+
+.profile-card, .education-card {
+    position: relative; /* Necesario para el pseudo-elemento */
+    flex: 1;
+    min-width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    z-index: 1; /* Asegura que el contenido esté encima */
+    color: var(--text); /* Asegúrate de que el texto sea visible */
+    font-size: 0.9rem;
+}
+
+.profile-card::before, .education-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(39, 37, 37, 0.9); /* Fondo con opacidad negra */
+    z-index: -1; /* Envía el fondo detrás del contenido */
+    border-radius: 15px;
+
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.education-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    margin-right: 1rem;
+    object-fit: cover;
+}
+
+.education-info h4 {
+    margin: 0;
+    color: var(--accent);
+}
+
+.education-info p {
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid #969696;
+    margin: 10px auto;
+    width: 100%;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.icon-location {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px; 
+}
+
+.git {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.icon-git {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px; 
+}
+
+.linkedin {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.icon-linkedin {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px; 
+}
+
+.icon-link {
+    text-decoration: none;
+    color: inherit;        
+}
+
+.icon-link:hover {
+    color: #0077b5;
+}
